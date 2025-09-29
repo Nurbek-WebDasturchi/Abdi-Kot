@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Abdurahmon 3000 Diagnostika</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #0f0;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+        button {
+            padding: 10px 25px;
+            font-size: 18px;
+            margin: 10px;
+            background-color: #222;
+            color: #0f0;
+            border: 1px solid #0f0;
+            cursor: pointer;
+        }
+        #natija {
+            margin-top: 40px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Abdurahmoning omi Diagnostika Paneli</h1>
+    <p>Qurilma ish holatini tekshirish uchun tugmani bosing:</p>
+    <button onclick="tekshir()">Diagnostika Boshlansin</button>
+
+    <div id="natija"></div>
+
+    <script>
+        function tekshir() {
+            const holatlar = [
+                "⚠️ Abdurahmon Omi: Javob bermayapti... Ehtimol, qayta yuklash kerak.",
+                "✅ Abdurahmon Omi: Ishlayapti. Garchi ba'zan 'dalbayop.exe' ishga tushsa ham.",
+                "❌ Xatolik: Abdurahmoning Omi noto‘g‘ri ma'lumot qaytardi. Sikish kerak.",
+                "⏳ Abdurahmon omi:  Selkasi olinyapti... juda sekin 😴",
+                "💥 Abdurahmon omi: Selkasi teshildi. Tuzatish mumkin emas.",
+                "🔋 Abdurahmon omi: Kengayib ketgan. Ginekolog ko‘rishni tavsiya qilamiz.",
+                "🤖 Abdurahmon omi: O'zini giperseksual deb o‘ylayapti. Xavfli holat."
+            ];
+            const natija = document.getElementById("natija");
+            const randomIndex = Math.floor(Math.random() * holatlar.length);
+            natija.innerText = holatlar[randomIndex];
+        }
+    </script>
+</body>
+</html>
